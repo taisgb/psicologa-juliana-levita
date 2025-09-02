@@ -132,7 +132,7 @@ class LandingPageApp {
     // Enhanced Theme System
     async initializeTheme() {
         const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+        const html = document.documentElement;
 
         if (!themeToggle) return;
 
@@ -154,7 +154,7 @@ class LandingPageApp {
 
         // Theme toggle handler
         themeToggle.addEventListener('click', () => {
-            currentTheme = body.classList.contains('dark-theme') ? 'light' : 'dark';
+            currentTheme = html.classList.contains('dark-theme') ? 'light' : 'dark';
             this.applyTheme(currentTheme);
             localStorage.setItem('theme', currentTheme);
             
@@ -167,18 +167,9 @@ class LandingPageApp {
         const html = document.documentElement;
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
         
+        // Aplicar tema apenas no elemento html (CORREÇÃO)
         html.classList.remove('light-theme', 'dark-theme');
         html.classList.add(`${theme}-theme`);
-        
-        
-        // Apply hero section variables directly
-        if (theme === 'light') {
-            root.style.setProperty('--hero-bg', 'linear-gradient(135deg, #2c5282 0%, #1a202c 100%)');
-            root.style.setProperty('--hero-text', '#ffffff');
-        } else {
-            root.style.setProperty('--hero-bg', 'linear-gradient(135deg, #2c5282 0%, #1a202c 100%)');
-            root.style.setProperty('--hero-text', '#ffffff');
-        }
         
         // Update meta theme color
         if (metaThemeColor) {
@@ -642,4 +633,3 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-

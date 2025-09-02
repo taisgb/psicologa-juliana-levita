@@ -1,6 +1,4 @@
-# Landing Page Modernizada - Psicóloga Juliana Levita
-
-## 🚀 Melhorias Implementadas
+# Landing Page - Psicóloga Juliana Levita
 
 ### ⚡ Performance e Otimização
 - **CSS Crítico Separado**: Carregamento otimizado com CSS crítico inline

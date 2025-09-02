@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/critical.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    
+    <title>Psicóloga Juliana Levita | Especialista em TCC para Ansiedade e Pânico em Salvador</title>
+    <meta name="description" content="Psicóloga clínica Juliana Levita (CRP 03/12443), especialista em Terapia Cognitivo-Comportamental. Atendimento online para ansiedade, pânico e autoestima. Agende sua consulta em Salvador-BA.">
+    <meta name="keywords" content="psicóloga salvador, terapia cognitivo comportamental, TCC salvador, ansiedade tratamento, ataques pânico, psicóloga online, autoestima, Juliana Levita, CRP 03/12443, terapia online bahia">
+    <meta name="author" content="Juliana R. Levita">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2c5282" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
+    
+    <!-- Immediate theme initialization -->
+    <script>
+        (function() {
+            // Get saved theme or system preference
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            
+            // Apply theme immediately to prevent flash - APENAS NO HTML
+            document.documentElement.classList.add(`${theme}-theme`);
+            
+            // Set CSS variables immediately
+            const root = document.documentElement;
+            if (theme === 'light') {
+                root.style.setProperty('--hero-bg', 'linear-gradient(135deg, #2c5282 0%, #1a202c 100%)');
+                root.style.setProperty('--hero-text', '#ffffff');
+            } else {
+                root.style.setProperty('--hero-bg', 'linear-gradient(135deg, #2c5282 0%, #1a202c 100%)');
+                root.style.setProperty('--hero-text', '#ffffff');
+            }
+        })();
+    </script>
+    
+    <!-- Canonical and geo tags -->
+    <link rel="canonical" href="https://www.julianalevitta.com.br">
+    <meta name="geo.region" content="BR-BA">
+    <meta name="geo.placename" content="Salvador, Bahia">
+    <meta name="geo.position" content="-12.9714;-38.5014">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Psicóloga Juliana Levita | Especialista em TCC para Ansiedade e Pânico">
+    <meta property="og:description" content="Especialista em Terapia Cognitivo-Comportamental em Salvador. Supere a ansiedade, pânico e construa autoestima saudável com atendimento personalizado.">
+    <meta property="og:image" content="./img/juliana.webp">
+    <meta property="og:image:alt" content="Psicóloga Juliana Levita - Especialista em TCC">
+    <meta property="og:url" content="https://www.julianalevitta.com.br">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Juliana Levita - Psicóloga">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Psicóloga Juliana Levita | TCC para Ansiedade">
+    <meta name="twitter:description" content="Especialista em Terapia Cognitivo-Comportamental. Atendimento online para ansiedade e pânico.">
+    <meta name="twitter:image" content="./img/juliana.webp">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Juliana R. Levita - Psicóloga",
+        "image": "./img/juliana.webp",
+        "description": "Psicóloga clínica especialista em Terapia Cognitivo-Comportamental (TCC) para tratamento de ansiedade, pânico e autoestima.",
+        "url": "https://www.julianalevitta.com.br",
+        "telephone": "+55-71-9191-8331",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Salvador",
+            "addressRegion": "BA",
+            "addressCountry": "BR"
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "provider": {
+            "@type": "Person",
+            "name": "Juliana R. Levita",
+            "jobTitle": "Psicóloga Clínica",
+            "sameAs": "https://www.instagram.com/julianarlevita/"
+        }
+    }
+    </script>
+    
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Fonts with optimized loading -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"></noscript>
+    
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="css/critical.css">
+    
+    <!-- Non-critical CSS -->
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+    
+    <!-- AOS CSS with optimized loading -->
+    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Loading indicator -->
+    <div id="loading-indicator" class="loading-indicator" aria-hidden="true">
+        <div class="loading-spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="logo">
+                <a href="#" aria-label="Página inicial - Juliana R. Levita Psicóloga">
+                    <span class="logo-name">Juliana R. Levita</span>
+                    <span class="logo-subtitle">Psicóloga Clínica</span>
+                </a>
+            </div>
+            <nav class="main-nav" role="navigation" aria-label="Menu principal" id="main-nav">
+                <ul>
+                    <li><a href="#about">Sobre Mim</a></li>
+                    <li><a href="#services">Como Posso Ajudar</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Agendar Consulta</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-toggle-button" aria-label="Alternar modo de cor" title="Alternar modo de cor">
+                    <svg class="moon-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                    </svg>
+                </button>
+                <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="hero" role="region" aria-labelledby="hero-title">
+            <div class="hero-background-animation" aria-hidden="true"></div>
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-content">
+                    <h1 id="hero-title">Viva uma vida que vale a pena!</h1>
+                    <p class="hero-subtitle">Encontre apoio e estratégias eficazes com a Terapia Cognitivo-Comportamental para superar seus desafios emocionais e construir uma vida mais equilibrada.</p>
+                    <div class="hero-badges" role="list" aria-label="Credenciais profissionais">
+                        <span role="listitem" class="badge">CRP 03/12443</span>
+                        <span role="listitem" class="badge">Especialista em TCC</span>
+                        <span role="listitem" class="badge">Atendimento Online</span>
+                    </div>
+                    <a href="#contact" class="cta-button" data-aos="zoom-in" data-aos-delay="500">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        Quero Começar a Terapia
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="credibility-section" aria-labelledby="credibility-title">
+            <div class="container">
+                <h2 id="credibility-title" class="visually-hidden">Credenciais Profissionais</h2>
+                <div class="credibility-grid" data-aos="fade-up">
+                    <div class="credibility-item">
+                        <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                        <span>Psicóloga Registrada CRP 03/12443</span>
+                    </div>
+                    <div class="credibility-item">
+                        <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                        </svg>
+                        <span>Pós-graduanda em Psicopatologia</span>
+                    </div>
+                    <div class="credibility-item">
+                        <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <span>Especialista em TCC</span>
+                    </div>
+                    <div class="credibility-item">
+                        <svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        <span>Atendimento Online Seguro</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section" aria-labelledby="about-title">
+            <div class="container content-section">
+                <figure class="about-image" data-aos="fade-right" data-aos-duration="1000">
+                    <picture>
+                        <source srcset="./img/juliana.webp" type="image/webp">
+                        <source srcset="./img/juliana.jpg" type="image/jpeg">
+                        <img src="./img/juliana.jpg" 
+                             alt="Foto da psicóloga Juliana Levita, sorrindo profissionalmente em um ambiente acolhedor de consultório." 
+                             width="320" 
+                             height="400" 
+                             loading="lazy"
+                             decoding="async">
+                    </picture>
+                </figure>
+                <div class="about-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <h2 id="about-title">Conheça sua Psicóloga</h2>
+                    <h3>Juliana R. Levita</h3>
+                    <p><strong>Psicóloga Clínica | CRP 03/12443</strong></p>
+                    <p>Sou pós-graduanda em Psicopatologia com formação especializada em Terapia Cognitivo-Comportamental (TCC). Minha missão é oferecer um espaço seguro e acolhedor para que você possa desenvolver ferramentas práticas e eficazes para lidar com a ansiedade, ataques de pânico e outros desafios emocionais.</p>
+                    <p>Acredito que, com a orientação correta e técnicas baseadas em evidências, todos podem construir uma vida mais equilibrada e significativa.</p>
+                    <a href="#services" class="secondary-button">Conheça Meus Serviços</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section bg-cream" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title" data-aos="fade-up">Como a Terapia Cognitivo-Comportamental Pode Ajudar?</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Técnicas cientificamente comprovadas para transformar sua relação com pensamentos e emoções.</p>
+                <div class="services-grid">
+                    <article class="service-card" data-aos="zoom-in" data-aos-delay="100" aria-labelledby="service-title-1">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 id="service-title-1">Ataques de Pânico</h3>
+                        <p>Aprenda técnicas validadas para gerenciar e reduzir a intensidade e frequência das crises de pânico.</p>
+                    </article>
+                    <article class="service-card" data-aos="zoom-in" data-aos-delay="200" aria-labelledby="service-title-2">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"></path>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                        </div>
+                        <h3 id="service-title-2">Ansiedade Generalizada</h3>
+                        <p>Desenvolva estratégias eficazes para lidar com a preocupação excessiva e os sintomas físicos da ansiedade.</p>
+                    </article>
+                    <article class="service-card" data-aos="zoom-in" data-aos-delay="300" aria-labelledby="service-title-3">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3 id="service-title-3">Baixa Autoestima</h3>
+                        <p>Trabalhe na construção de uma autoimagem mais positiva, fortalecendo sua confiança e amor próprio.</p>
+                    </article>
+                    <article class="service-card" data-aos="zoom-in" data-aos-delay="400" aria-labelledby="service-title-4">
+                        <div class="service-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 id="service-title-4">Gestão de Emoções</h3>
+                        <p>Encontre maneiras construtivas de lidar com sentimentos como tristeza, raiva e frustração.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials-section section" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 id="testimonials-title" data-aos="fade-up">O que dizem sobre a terapia</h2>
+                <div class="testimonials-grid">
+                    <figure class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                        <blockquote>
+                            <p>"A terapia com Juliana me ajudou a entender meus padrões de pensamento e a lidar com a ansiedade. Hoje me sinto muito mais confiante."</p>
+                        </blockquote>
+                        <figcaption>— M. S., 32 anos</figcaption>
+                    </figure>
+                    <figure class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                        <blockquote>
+                            <p>"Os ataques de pânico diminuíram drasticamente. Juliana me ensinou técnicas que realmente funcionam no dia a dia."</p>
+                        </blockquote>
+                        <figcaption>— J. P., 28 anos</figcaption>
+                    </figure>
+                    <figure class="testimonial" data-aos="fade-up" data-aos-delay="300">
+                        <blockquote>
+                            <p>"O atendimento online é muito prático e eficaz. Me sinto à vontade em um ambiente seguro e acolhedor."</p>
+                        </blockquote>
+                        <figcaption>— A. L., 35 anos</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section bg-cream" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title" data-aos="fade-up">Perguntas Frequentes</h2>
+                <div class="faq-container" data-aos="fade-up" data-aos-delay="200">
+                    <details class="faq-item">
+                        <summary>Como funciona a primeira consulta?</summary>
+                        <div class="faq-content">
+                            <p>A primeira consulta é uma conversa para nos conhecermos. Você poderá falar sobre o que busca na terapia e eu explicarei minha abordagem. Juntos, avaliaremos como posso te ajudar.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Qual a duração de uma sessão?</summary>
+                        <div class="faq-content">
+                            <p>Cada sessão tem duração de 50 minutos e ocorre semanalmente, em dia e horário combinados.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>O atendimento é apenas online?</summary>
+                        <div class="faq-content">
+                            <p>Sim, os atendimentos são 100% online, através de videochamadas seguras, permitindo atender pessoas de qualquer lugar.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Quais formas de pagamento são aceitas?</summary>
+                        <div class="faq-content">
+                            <p>O pagamento pode ser realizado via PIX ou transferência bancária, antes de cada sessão ou em pacotes mensais.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="container" data-aos="fade-up" data-aos-duration="1000">
+                <h2 id="contact-title">Dê o primeiro passo para sua mudança</h2>
+                <p>Envie uma mensagem para agendar sua consulta e construir uma vida mais equilibrada. Estou aqui para ajudar.</p>
+                
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Seu nome *</label>
+                        <input type="text" 
+                               id="name" 
+                               name="name" 
+                               placeholder="Como posso te chamar?" 
+                               required 
+                               autocomplete="name" 
+                               aria-describedby="name-error name-help">
+                        <span id="name-help" class="form-help">Digite seu nome completo</span>
+                        <span id="name-error" class="error-message" role="alert" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" 
+                                  name="message" 
+                                  rows="4" 
+                                  placeholder="Conte-me um pouco sobre o que você gostaria de trabalhar (opcional)"
+                                  aria-describedby="message-help"></textarea>
+                        <span id="message-help" class="form-help">Compartilhe brevemente seus objetivos para a terapia</span>
+                    </div>
+                    <button type="submit" class="cta-button" id="submit-button">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                        <span class="button-text">Enviar Mensagem no WhatsApp</span>
+                        <span class="button-loading" aria-hidden="true">Enviando...</span>
+                    </button>
+                </form>
+                
+                <address class="contact-info" data-aos="fade-up" data-aos-delay="500">
+                    <div class="contact-item">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>(71) 9 1918-8331</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>contato@julianalevitta.com.br</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>Salvador, Bahia</span>
+                    </div>
+                </address>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Juliana R. Levita - Psicóloga Clínica</strong></p>
+                    <p>CRP 03/12443 | Especialista em TCC</p>
+                    <p>Atendimento online para todo o Brasil</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/julianarlevita/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="Seguir no Instagram">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/557191918331" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="Conversar no WhatsApp">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Juliana R. Levita. Todos os direitos reservados. | 
+                   <a href="#" class="footer-link">Política de Privacidade</a> | 
+                   <a href="#" class="footer-link">Termos de Uso</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Sticky Button -->
+    <a href="https://wa.me/557191918331" 
+       class="whatsapp-sticky-button" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Conversar no WhatsApp"
+       title="Agendar consulta via WhatsApp">
+        <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="js/main.js" defer></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(registrationError => console.log('SW registration failed'));
+            });
+        }
+    </script>
+</body>
+</html>
+

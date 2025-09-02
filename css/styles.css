@@ -129,42 +129,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Loading indicator */
-.loading-indicator {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-bg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: opacity 0.3s ease;
-}
-
-.loading-indicator.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 3px solid var(--color-accent);
-  border-top: 3px solid transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: var(--spacing-sm);
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
 /* Container */
 .container {
   max-width: 1200px;
@@ -1013,6 +977,12 @@ html.dark-theme .theme-toggle-button .sun-icon {
 }
 
 .footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+
   text-align: center;
   padding-top: var(--spacing-lg);
   font-size: 0.9rem;
@@ -1027,6 +997,25 @@ html.dark-theme .theme-toggle-button .sun-icon {
 
 .footer-link:hover {
   text-decoration: underline;
+}
+
+.developer-credit {
+  text-align: center;
+  margin-top: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary); /* Usa a cor de texto secundário do tema */
+}
+
+.developer-credit a {
+  color: var(--color-accent); /* Usa a cor de destaque do tema (azul ou azul claro) */
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.developer-credit a:hover {
+  color: var(--color-accent-hover); /* Usa a cor de hover do tema */
+  text-decoration: none; /* Remove o sublinhado no hover para um efeito sutil */
 }
 
 /* WhatsApp sticky button */

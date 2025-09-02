@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Preload critical resources -->
-    <link rel="preload" href="css/critical.css" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="js/main.js" as="script">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://unpkg.com">
     
     <title>Psicóloga Juliana Levita | Especialista em TCC para Ansiedade e Pânico em Salvador</title>
     <meta name="description" content="Psicóloga clínica Juliana Levita (CRP 03/12443), especialista em Terapia Cognitivo-Comportamental. Atendimento online para ansiedade, pânico e autoestima. Agende sua consulta em Salvador-BA.">
@@ -17,37 +15,20 @@
     <meta name="author" content="Juliana R. Levita">
     <meta name="robots" content="index, follow">
  
-    
-    <!-- Immediate theme initialization -->
     <script>
         (function() {
-            // Get saved theme or system preference
             const savedTheme = localStorage.getItem('theme');
             const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-            
-            // Apply theme immediately to prevent flash - APENAS NO HTML
             document.documentElement.classList.add(`${theme}-theme`);
-            
-            // Set CSS variables immediately
-            const root = document.documentElement;
-            if (theme === 'light') {
-                root.style.setProperty('--hero-bg', 'linear-gradient(135deg, #2c5282 0%, #1a202c 100%)');
-                root.style.setProperty('--hero-text', '#ffffff');
-            } else {
-                root.style.setProperty('--hero-bg', 'linear-gradient(135deg, #2c5282 0%, #1a202c 100%)');
-                root.style.setProperty('--hero-text', '#ffffff');
-            }
         })();
     </script>
     
-    <!-- Canonical and geo tags -->
     <link rel="canonical" href="https://www.julianalevita.com.br">
     <meta name="geo.region" content="BR-BA">
     <meta name="geo.placename" content="Salvador, Bahia">
     <meta name="geo.position" content="-12.9714;-38.5014">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Psicóloga Juliana Levita | Especialista em TCC para Ansiedade e Pânico">
     <meta property="og:description" content="Especialista em Terapia Cognitivo-Comportamental em Salvador. Supere a ansiedade, pânico e construa autoestima saudável com atendimento personalizado.">
     <meta property="og:image" content="./img/juliana.webp">
@@ -57,13 +38,11 @@
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Juliana Levita - Psicóloga">
     
-    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Psicóloga Juliana Levita | TCC para Ansiedade">
     <meta name="twitter:description" content="Especialista em Terapia Cognitivo-Comportamental. Atendimento online para ansiedade e pânico.">
     <meta name="twitter:image" content="./img/juliana.webp">
     
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -89,24 +68,20 @@
     }
     </script>
     
-    <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="./manifest.json">
     
-    <!-- Fonts with optimized loading -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"></noscript>
     
-    <!-- My CSS -->
     <link rel="stylesheet" href="./css/styles.css">    
-    
-    <!-- AOS CSS with optimized loading -->
-    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
     <header class="header" role="banner">
         <div class="container">
             <div class="logo">
@@ -234,7 +209,7 @@
         <section id="services" class="section bg-cream" aria-labelledby="services-title">
             <div class="container">
                 <h2 id="services-title" data-aos="fade-up">Como a Terapia Cognitivo-Comportamental Pode Ajudar?</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Técnicas cientificamente comprovadas para transformar sua relação com pensamentos and emoções.</p>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Técnicas cientificamente comprovadas para transformar sua relação com pensamentos e emoções.</p>
                 <div class="services-grid">
                     <article class="service-card" data-aos="zoom-in" data-aos-delay="100" aria-labelledby="service-title-1">
                         <div class="service-icon" aria-hidden="true">
@@ -286,7 +261,7 @@
                 <div class="testimonials-grid">
                     <figure class="testimonial" data-aos="fade-up" data-aos-delay="100">
                         <blockquote>
-                            <p>"A terapia com Juliana me ajudou a entender meus padrões de pensamento and a lidar com a ansiedade. Hoje me sinto muito mais confiante."</p>
+                            <p>"A terapia com Juliana me ajudou a entender meus padrões de pensamento e a lidar com a ansiedade. Hoje me sinto muito mais confiante."</p>
                         </blockquote>
                         <figcaption>— M. S., 32 anos</figcaption>
                     </figure>
@@ -298,7 +273,7 @@
                     </figure>
                     <figure class="testimonial" data-aos="fade-up" data-aos-delay="300">
                         <blockquote>
-                            <p>"O atendimento online é muito prático and eficaz. Me sinto à vontade em um ambiente seguro and acolhedor."</p>
+                            <p>"O atendimento online é muito prático e eficaz. Me sinto à vontade em um ambiente seguro e acolhedor."</p>
                         </blockquote>
                         <figcaption>— A. L., 35 anos</figcaption>
                     </figure>
@@ -313,13 +288,13 @@
                     <details class="faq-item">
                         <summary>Como funciona a primeira consulta?</summary>
                         <div class="faq-content">
-                            <p>A primeira consulta é uma conversa para nos conhecermos. Você poderá falar sobre o que busca na terapia and eu explicarei minha abordagem. Juntos, avaliaremos como posso te ajudar.</p>
+                            <p>A primeira consulta é uma conversa para nos conhecermos. Você poderá falar sobre o que busca na terapia e eu explicarei minha abordagem. Juntos, avaliaremos como posso te ajudar.</p>
                         </div>
                     </details>
                     <details class="faq-item">
                         <summary>Qual a duração de uma sessão?</summary>
                         <div class="faq-content">
-                            <p>Cada sessão has duração de 50 minutos and ocorre semanalmente, em dia and horário combinados.</p>
+                            <p>Cada sessão tem duração de 50 minutos e ocorre semanalmente, em dia e horário combinados.</p>
                         </div>
                     </details>
                     <details class="faq-item">
@@ -341,7 +316,7 @@
         <section id="contact" class="section" aria-labelledby="contact-title">
             <div class="container" data-aos="fade-up" data-aos-duration="1000">
                 <h2 id="contact-title">Dê o primeiro passo para sua mudança</h2>
-                <p>Envie uma mensagem para agendar sua consulta and construir uma vida mais equilibrada. Estou aqui para ajudar.</p>
+                <p>Envie uma mensagem para agendar sua consulta e construir uma vida mais equilibrada. Estou aqui para ajudar.</p>
                 
                 <form id="contact-form" class="contact-form" novalidate>
                     <div class="form-group">
@@ -379,14 +354,14 @@
                         <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                         </svg>
-                        <span>(71) 9 1918-8331</span>
+                        <a href="tel:+557191918331">(71) 9191-8331</a>
                     </div>
                     <div class="contact-item">
                         <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <span>contato@julianalevita.com.br</span>
+                        <a href="mailto:contato@julianalevita.com.br">contato@julianalevita.com.br</a>
                     </div>
                     <div class="contact-item">
                         <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -430,13 +405,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Juliana R. Levita. Todos os direitos reservados.
+                <p>&copy; 2025 Juliana R. Levita. Todos os direitos reservados.</p>
+                <p class="developer-credit">
+                    Desenvolvido por <a href="https://taisgb.com.br">taisgb.com.br</a>
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Sticky Button -->
     <a href="https://wa.me/557191918331" 
        class="whatsapp-sticky-button" 
        target="_blank" 
@@ -447,8 +423,7 @@
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
         </svg>
     </a>
-
-    <!-- Scripts -->
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="./js/main.js" defer></script>
 

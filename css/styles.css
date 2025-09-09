@@ -913,8 +913,6 @@ html.dark-theme .header.scrolled {
 
 /* --- 8. RESPONSIVIDADE (MEDIA QUERIES) --- */
 
-/* --- 8. RESPONSIVIDADE (MEDIA QUERIES) --- */
-
 /* Para Telas Muito Grandes (1400px ou mais) */
 @media (min-width: 1400px) {
     .container {
@@ -936,7 +934,7 @@ html.dark-theme .header.scrolled {
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: var(--spacing-lg); /* Reduz o gap */
+        gap: var(--spacing-lg);
     }
     .hero-text-content {
         order: 2;
@@ -948,9 +946,9 @@ html.dark-theme .header.scrolled {
     }
     .hero-image-content img {
         max-height: 450px;
-        width: auto; /* Garante a proporção correta */
-        max-width: 80%; /* Evita que a imagem fique muito grande */
-        margin: 0 auto; /* Centraliza a imagem */
+        width: auto;
+        max-width: 80%;
+        margin: 0 auto;
     }
     #hero h1, .hero-subtitle {
         margin-left: auto;
@@ -978,6 +976,13 @@ html.dark-theme .header.scrolled {
     }
     .container {
         padding: 0 var(--spacing-sm);
+    }
+
+    /* Esconde as setas do carrossel no mobile  */
+    .slick-prev, .slick-next {
+        display: none !important;
+        visibility: hidden !important; 
+        opacity: 0 !important;         
     }
 
     /* --- Header e Menu Mobile --- */
@@ -1052,11 +1057,10 @@ html.dark-theme .header.scrolled {
         flex-direction: column;
         gap: var(--spacing-sm);
     }
-    /* Garante que os botões fiquem centralizados */
     .cta-button, .secondary-button {
         justify-content: center;
         width: 100%;
-        max-width: 350px; /* Limita a largura máxima dos botões */
+        max-width: 350px;
     }
     .credibility-grid { 
         grid-template-columns: repeat(2, 1fr); 
@@ -1085,6 +1089,7 @@ html.dark-theme .header.scrolled {
         padding: var(--spacing-md) var(--spacing-sm);
         font-size: 1rem;
     }
+    
 }
 
 /* --- 9. ACESSIBILIDADE E ANIMAÇÕES --- */

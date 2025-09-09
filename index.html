@@ -78,6 +78,8 @@
     <link rel="stylesheet" href="./css/styles.css">    
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 </head>
 <body>
     <header class="header" role="banner">
@@ -227,26 +229,52 @@
             <div class="container">
                 <h2 id="testimonials-title" data-aos="fade-up">Vidas transformadas</h2>
                 <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Leia relatos de alguns dos meus pacientes.</p>
-                <div class="testimonials-grid">
-                    <figure class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                
+                <div class="testimonials-carousel">
+                    <figure class="testimonial">
                         <blockquote>
-                            <p>"A terapia com Juliana me ajudou a entender meus padrões de pensamento e a lidar com a ansiedade. Hoje me sinto muito mais confiante."</p>
+                            <p>A Dra Juliana é uma profissional muito competente e maravilhosa. Ela tem me ajudado muito a entender a minha vida e personalidade. No momento que mais precisei de ajuda ela me deu a mão, o ouvir e por ela percebi que nasci pra ser alguém melhor que sou. Eu muito indico ela como terapeuta."</p>
                         </blockquote>
-                        <figcaption>— M. S., 32 anos</figcaption>
+                        <figcaption>— M. S.</figcaption>
                     </figure>
-                    <figure class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                    <figure class="testimonial">
                         <blockquote>
-                            <p>"Os ataques de pânico diminuíram drasticamente. Juliana me ensinou técnicas que realmente funcionam no dia a dia."</p>
+                            <p>Juliana tem sido uma grata surpresa nas inúmeras tentativas de manter meu tratamento.
+                            Seu bom humor, escuta atenta, paciência e firmeza na condução das consultas tem feito grande diferença nos meus dias, além de despertar a vontade de não faltar, não perder uma sessão, custe o que custar."</p>
                         </blockquote>
-                        <figcaption>— J. P., 28 anos</figcaption>
+                        <figcaption>— N. C.</figcaption>
                     </figure>
-                    <figure class="testimonial" data-aos="fade-up" data-aos-delay="300">
+                    <figure class="testimonial">
                         <blockquote>
-                            <p>"O atendimento online é muito prático e eficaz. Me sinto à vontade em um ambiente seguro e acolhedor."</p>
+                            <p>Profissional brilhante, super atenciosa e educada! Cumpre o que se pede dessa profissão, direcionamento, empatia e segurança. Recomendo muito!"</p>
                         </blockquote>
-                        <figcaption>— A. L., 35 anos</figcaption>
+                        <figcaption>— M. C.</figcaption>
                     </figure>
-                </div>
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>Ótima profissional, atenciosa, comunicativa, boa ouvinte, auxilia muito nos processos de aprendizagem para uma vida melhor."</p>
+                        </blockquote>
+                        <figcaption>— C. L.</figcaption>
+                    </figure>
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>Excelente profissional, abordagem prática sem deixar de ser atenciosa. Recomendo muito!"</p>
+                        </blockquote>
+                        <figcaption>— P. Q.</figcaption>
+                    </figure>
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>A melhor psicóloga do mundo! Atenciosa, humana, dedicada ❤️"</p>
+                        </blockquote>
+                        <figcaption>— G. G.</figcaption>
+                    </figure>
+                    <figure class="testimonial">
+                        <blockquote>
+                            <p>Muito querida e sempre muito empática, as sessões sempre são divertidas (mesmo com tristeza), adoro a diva."</p>
+                        </blockquote>
+                        <figcaption>— D.</figcaption>
+                    </figure>
+                    </div>
             </div>
         </section>
 
@@ -403,8 +431,11 @@
         </svg>
     </a>
     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="./js/main.js" defer></script>
+    <script src="./js/depoimentos.js" defer></script>
 
 </body>
 </html>

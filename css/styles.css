@@ -633,11 +633,42 @@ html.dark-theme .header.scrolled {
   background-color: var(--color-bg); 
   transition: background-color 0.3s ease; 
 }
-.testimonials-grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  gap: var(--spacing-xl); 
-  margin-top: var(--spacing-2xl); 
+/* --- Estilos Adicionais para o Carrossel --- */
+.testimonials-carousel {
+    margin-top: var(--spacing-2xl);
+    padding: 0 var(--spacing-sm);
+}
+
+.testimonial {
+    margin: 0 var(--spacing-sm); /* Espaçamento entre os cards do carrossel */
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+    display: flex !important; /* Força o alinhamento correto dentro do slick */
+    flex-direction: column;
+}
+
+/* Estilo para as setas e pontos de navegação */
+.slick-prev:before, .slick-next:before {
+    color: var(--color-accent) !important;
+    font-size: 30px !important;
+}
+
+.slick-dots li button:before {
+    font-size: 12px !important;
+    color: var(--color-text-secondary) !important;
+    opacity: 0.5 !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--color-accent) !important;
+    opacity: 1 !important;
+}
+
+.slick-prev {
+    left: -25px;
+}
+
+.slick-next {
+    right: -25px;
 }
 .testimonial { 
   background-color: var(--color-bg-secondary); 

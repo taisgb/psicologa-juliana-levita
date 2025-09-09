@@ -1,233 +1,81 @@
-# Landing Page - Psicóloga Juliana Levita
+# Landing Page - Psicóloga Juliana R. Levita
 
-### ⚡ Performance e Otimização
-- **CSS Crítico Separado**: Carregamento otimizado com CSS crítico inline
-- **Lazy Loading**: Imagens carregadas sob demanda
-- **Preload de Recursos**: Recursos críticos pré-carregados
-- **Service Worker**: Cache inteligente e funcionalidade offline
-- **Compressão de Recursos**: Otimização de imagens e assets
+Este é o repositório do projeto da landing page para a psicóloga clínica Juliana R. Levita, especialista em Terapia Cognitivo-Comportamental (TCC). O site foi desenvolvido para ser moderno, responsivo, rápido e otimizado para SEO.
 
-### 🎨 Design e UX Modernos
-- **CSS Grid Avançado**: Layout responsivo com CSS Grid moderno
-- **Micro-interações**: Animações suaves e feedback visual
-- **Tema Escuro Inteligente**: Respeita preferência do sistema
-- **Componentes Interativos**: Hover states e transições aprimoradas
-- **Design System**: Variáveis CSS organizadas e consistentes
+## 🚀 Visão Geral do Projeto
 
-### 📱 Responsividade Avançada
-- **Mobile-First**: Design otimizado para dispositivos móveis
-- **Container Queries**: Responsividade baseada em container
-- **Touch-Friendly**: Elementos otimizados para toque
-- **Viewport Adaptativo**: Ajustes dinâmicos baseados no dispositivo
+O objetivo desta landing page é apresentar os serviços da psicóloga Juliana R. Levita de forma profissional e acolhedora, fornecendo informações claras sobre sua abordagem terapêutica, respondendo a dúvidas comuns e facilitando o agendamento de consultas através de um Call to Action (CTA) direto para o WhatsApp.
 
-### ♿ Acessibilidade Melhorada
-- **ARIA Labels**: Semântica aprimorada para screen readers
-- **Navegação por Teclado**: Suporte completo para navegação por teclado
-- **Contraste Otimizado**: Cores com contraste adequado
-- **Focus Management**: Gestão inteligente de foco
-- **Reduced Motion**: Respeita preferências de movimento reduzido
+### ✨ Principais Funcionalidades
 
-### 🔧 JavaScript Moderno
-- **ES6+ Features**: Uso de classes, async/await, destructuring
-- **Intersection Observer**: Animações performáticas
-- **Error Handling**: Tratamento robusto de erros
-- **Performance Monitoring**: Monitoramento de Core Web Vitals
-- **Modular Architecture**: Código organizado e reutilizável
-
-### 🌐 PWA (Progressive Web App)
-- **Service Worker**: Cache e funcionalidade offline
-- **Web App Manifest**: Instalação como app nativo
-- **Push Notifications**: Suporte para notificações (futuro)
-- **Background Sync**: Sincronização em background
-- **App Shortcuts**: Atalhos personalizados
-
-### 🔍 SEO e Performance
-- **Core Web Vitals**: Otimizado para LCP, FID, CLS
-- **Structured Data**: Schema.org implementado
-- **Meta Tags Otimizadas**: SEO completo
-- **Canonical URLs**: URLs canônicas definidas
-- **Sitemap Ready**: Preparado para sitemap
-
-## 📁 Estrutura de Arquivos
-
-```
-landing_page_melhorada/
-├── index.html              # HTML modernizado
-├── css/
-│   ├── critical.css        # CSS crítico (above-the-fold)
-│   └── main.css           # CSS principal
-├── js/
-│   └── main.js            # JavaScript modernizado
-├── img/                   # Imagens otimizadas
-├── sw.js                  # Service Worker
-├── manifest.json          # Web App Manifest
-└── README.md             # Esta documentação
-```
+* **Design Responsivo:** O layout se adapta perfeitamente a desktops, tablets e celulares.
+* **Tema Claro e Escuro (Dark Mode):** Permite que o usuário escolha o tema visual de sua preferência, que é salva no navegador.
+* **Otimização para SEO:** Estrutura semântica, meta tags detalhadas e dados estruturados (JSON-LD) para melhor posicionamento no Google.
+* **Animações Sutis:** Utiliza a biblioteca Animate on Scroll (AOS) para criar animações de entrada elegantes conforme o usuário rola a página.
+* **Carrossel de Depoimentos:** Exibe as avaliações de pacientes de forma dinâmica e interativa, utilizando a biblioteca Slick Carousel.
+* **Performance:** Foco em alta performance com otimização de imagens (WebP), carregamento assíncrono de scripts e CSS, e minificação de arquivos.
+* **Acessibilidade (A11y):** Implementação de boas práticas de acessibilidade, como atributos ARIA, contraste de cores e navegação por teclado.
 
 ## 🛠️ Tecnologias Utilizadas
 
-### HTML5
-- Semântica moderna
-- Meta tags otimizadas
-- Structured data (JSON-LD)
-- Progressive enhancement
+O projeto foi construído utilizando tecnologias web fundamentais, sem a necessidade de frameworks complexos, garantindo leveza e performance.
 
-### CSS3
-- Custom Properties (CSS Variables)
-- CSS Grid e Flexbox
-- Container Queries
-- CSS Animations
-- Media Queries avançadas
+* **HTML5:** Para a estrutura semântica do conteúdo.
+* **CSS3:** Para estilização, layout (Flexbox e Grid), animações e responsividade.
+* **JavaScript (ES6+):** Para interatividade, manipulação do DOM e funcionalidades como o modo escuro e o menu mobile.
+* **Bibliotecas Externas:**
+    * **AOS (Animate on Scroll):** Para as animações de rolagem.
+    * **jQuery:** Dependência para o Slick Carousel.
+    * **Slick Carousel:** Para o carrossel de depoimentos.
+    * **SVG Icons:** Ícones leves e escaláveis para uma interface limpa.
 
-### JavaScript ES6+
-- Classes e módulos
-- Async/await
-- Intersection Observer
-- Performance API
-- Service Workers
+## 📁 Estrutura de Arquivos
 
-### PWA Technologies
-- Service Worker API
-- Web App Manifest
-- Cache API
-- Background Sync
+O projeto está organizado da seguinte forma:
 
-## 🚀 Como Usar
+|-- index.html              # Arquivo principal da página
+|-- README.md               # Este arquivo
+|
+|-- css/
+|   |-- styles.css          # Folha de estilos principal (versão para desenvolvimento)
+|   |-- styles.min.css      # Folha de estilos minificada (versão para produção)
+|
+|-- js/
+|   |-- main.js             # Script principal com a lógica do site
+|   |-- depoimentos.js      # Script de inicialização do carrossel
+|
+|-- img/
+|   |-- logo.svg            # Logo principal do site
+|   |-- juliana_hero.webp    # Imagem da psicóloga para a seção Hero
+|   |-- juliana_sobre.webp   # Imagem da psicóloga para a seção Sobre
+|   |-- bg-textura.webp      # Imagem de textura para o fundo
+|   |-- favicon.ico         # Ícone para a aba do navegador
+|   |-- ... (outras imagens)
 
-### 1. Desenvolvimento Local
-```bash
-# Servir os arquivos com um servidor HTTP
-python -m http.server 8000
-# ou
-npx serve .
-```
+## 🚀 Como Executar Localmente
 
-### 2. Deploy em Produção
-- Faça upload de todos os arquivos para seu servidor
-- Configure HTTPS (obrigatório para Service Workers)
-- Configure headers de cache apropriados
-- Teste a funcionalidade PWA
+Para visualizar e editar o projeto no seu computador, siga os passos:
 
-### 3. Configurações Recomendadas
+1.  **Clone ou baixe o repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/psicologa-juliana-levita.git](https://github.com/seu-usuario/psicologa-juliana-levita.git)
+    ```
 
-#### Servidor Web (Apache/Nginx)
-```apache
-# Cache headers
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresByType text/css "access plus 1 year"
-    ExpiresByType application/javascript "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-</IfModule>
+2.  **Navegue até a pasta do projeto:**
+    ```bash
+    cd psicologa-juliana-levita
+    ```
 
-# Compression
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/css
-    AddOutputFilterByType DEFLATE application/javascript
-    AddOutputFilterByType DEFLATE text/html
-</IfModule>
-```
+3.  **Abra o arquivo `index.html`:**
+    * A forma mais recomendada é utilizar uma extensão como o **Live Server** no Visual Studio Code. Basta clicar com o botão direito no arquivo `index.html` e selecionar "Open with Live Server".
+    * Alternativamente, você pode abrir o arquivo `index.html` diretamente em qualquer navegador.
 
-## 📊 Métricas de Performance
+## ⚙️ Configuração e Customização
 
-### Antes vs Depois
-- **Lighthouse Score**: 85 → 98
-- **First Contentful Paint**: 2.1s → 0.8s
-- **Largest Contentful Paint**: 3.2s → 1.2s
-- **Cumulative Layout Shift**: 0.15 → 0.02
-- **Time to Interactive**: 3.8s → 1.5s
+* **Informações de Contato:** Para alterar o número de WhatsApp, e-mail ou links de redes sociais, edite diretamente o arquivo `index.html` nas seções de Contato e Rodapé.
+* **Textos e Imagens:** Todo o conteúdo textual e os caminhos das imagens podem ser alterados no `index.html`.
+* **Cores e Fontes:** As cores principais, fontes e espaçamentos do site são controlados por variáveis CSS no topo do arquivo `css/styles.css`. Alterar uma variável (ex: `--color-brand-blue`) aplicará a mudança em todo o site.
 
-### Core Web Vitals
-- ✅ **LCP**: < 1.5s (Bom)
-- ✅ **FID**: < 50ms (Bom)  
-- ✅ **CLS**: < 0.05 (Bom)
+---
 
-## 🔧 Funcionalidades Implementadas
-
-### 1. Sistema de Tema Inteligente
-- Detecção automática de preferência do sistema
-- Persistência da escolha do usuário
-- Transições suaves entre temas
-- Suporte a `prefers-color-scheme`
-
-### 2. Formulário Avançado
-- Validação em tempo real
-- Estados de loading
-- Integração com WhatsApp
-- Tratamento de erros
-- Acessibilidade completa
-
-### 3. Menu Mobile Otimizado
-- Animações suaves
-- Gestão de foco
-- Fechamento por ESC
-- Prevenção de scroll do body
-
-### 4. Sistema de Cache Inteligente
-- Cache First para recursos estáticos
-- Network First para conteúdo dinâmico
-- Stale While Revalidate para outros recursos
-- Limpeza automática de cache
-
-### 5. Monitoramento de Performance
-- Core Web Vitals tracking
-- Error monitoring
-- Performance Observer
-- Resource timing
-
-## 🐛 Debugging e Manutenção
-
-### Service Worker
-```javascript
-// Verificar status do Service Worker
-navigator.serviceWorker.getRegistration().then(reg => {
-    console.log('SW Status:', reg ? 'Registered' : 'Not registered');
-});
-
-// Limpar cache manualmente
-caches.keys().then(names => {
-    names.forEach(name => caches.delete(name));
-});
-```
-
-### Performance
-```javascript
-// Monitorar Core Web Vitals
-new PerformanceObserver((list) => {
-    list.getEntries().forEach(entry => {
-        console.log(entry.entryType, entry.startTime);
-    });
-}).observe({entryTypes: ['largest-contentful-paint', 'first-input']});
-```
-
-## 📱 Teste de PWA
-
-### Chrome DevTools
-1. Abra DevTools (F12)
-2. Vá para Application > Service Workers
-3. Verifique se está registrado
-4. Teste offline em Network > Offline
-
-### Lighthouse
-1. Abra DevTools
-2. Vá para Lighthouse
-3. Execute audit de PWA
-4. Verifique score e sugestões
-
-## 🔄 Atualizações Futuras
-
-### Planejadas
-- [ ] Implementar Push Notifications
-- [ ] Adicionar Background Sync para formulários
-- [ ] Otimizar ainda mais as imagens
-- [ ] Implementar Critical Resource Hints
-- [ ] Adicionar testes automatizados
-
-### Possíveis
-- [ ] Integração com CMS
-- [ ] Sistema de agendamento online
-- [ ] Chat bot integrado
-- [ ] Analytics avançado
-- [ ] A/B testing
-
-
+Desenvolvido com foco em performance e experiência do usuário.

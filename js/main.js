@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof AOS !== "undefined") {
         AOS.init({
             once: true,
-            duration: 800,
+            duration: 400,
             offset: 100,
             easing: "ease-out-cubic",
             disable: window.matchMedia("(prefers-reduced-motion: reduce)").matches,

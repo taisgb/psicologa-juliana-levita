@@ -279,15 +279,11 @@ html.dark-theme .header.scrolled {
   text-decoration: none; 
 }
 .logo-image {
-  height: 50px;
+  height: 70px;
   width: auto;
+  border-radius: 100px;
+  border: 2px solid #004bad;
 }
-
-.logo-text-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
 .main-nav ul { 
   list-style: none; 
   display: flex; 
@@ -321,6 +317,9 @@ html.dark-theme .header.scrolled {
   display: flex; 
   align-items: center; 
   gap: var(--spacing-sm); 
+}
+.menu-toggle {
+  display: none; 
 }
 
 .footer { 
@@ -371,12 +370,17 @@ html.dark-theme .header.scrolled {
   height: 24px;
 }
 .footer-bottom { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center; 
   padding-top: var(--spacing-lg); 
   font-size: 0.9rem; 
   color: #a0aec0; 
 }
 .developer-credit {
+
   text-align: center;
   margin-top: var(--spacing-sm);
   font-size: 0.9rem;
@@ -413,7 +417,7 @@ html.dark-theme .header.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/bg-textura.jpg');
+    background-image: url('../img/bg-textura.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -624,6 +628,7 @@ html.dark-theme .header.scrolled {
   text-align: center; 
 }
 .about-text p { 
+  text-align: justify;
   max-width: none; 
   
 }
@@ -702,7 +707,7 @@ html.dark-theme .header.scrolled {
 }
 
 .testimonial p { 
-  font-size: 1.1rem; 
+  font-size: 1rem; 
   line-height: 1.6; 
   margin-bottom: var(--spacing-md); 
   color: var(--color-text-secondary); 
@@ -907,10 +912,31 @@ html.dark-theme .header.scrolled {
 }
 
 /* --- 8. RESPONSIVIDADE (MEDIA QUERIES) --- */
+
+/* --- 8. RESPONSIVIDADE (MEDIA QUERIES) --- */
+
+/* Para Telas Muito Grandes (1400px ou mais) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    h1 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+    }
+    h2 {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+    }
+    .hero-grid {
+        gap: var(--spacing-2xl);
+    }
+}
+
+/* Para Tablets e Telas Menores (até 992px) */
 @media (max-width: 992px) {
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: var(--spacing-lg); /* Reduz o gap */
     }
     .hero-text-content {
         order: 2;
@@ -918,7 +944,13 @@ html.dark-theme .header.scrolled {
     }
     .hero-image-content {
         order: 1;
-        margin-bottom: var(--spacing-xl);
+        margin-bottom: var(--spacing-lg);
+    }
+    .hero-image-content img {
+        max-height: 450px;
+        width: auto; /* Garante a proporção correta */
+        max-width: 80%; /* Evita que a imagem fique muito grande */
+        margin: 0 auto; /* Centraliza a imagem */
     }
     #hero h1, .hero-subtitle {
         margin-left: auto;
@@ -927,48 +959,132 @@ html.dark-theme .header.scrolled {
     .hero-buttons {
         justify-content: center;
     }
+    .content-section { 
+        grid-template-columns: 1fr; 
+        text-align: center; 
+    }
+    .about-text h2 { 
+        text-align: center; 
+    }
 }
-@media (max-width: 768px) {
-  .header .container { position: relative; }
-  .main-nav {
-    display: flex; 
-    position: fixed; 
-    top: 0; 
-    right: -100%;
-    width: 100%; 
-    height: 100vh; 
-    background-color: var(--color-bg);
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-    transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-    z-index: 999;
-  }
-  .main-nav.nav-open { right: 0; }
-  .main-nav ul { flex-direction: column; text-align: center; gap: var(--spacing-xl); }
-  .main-nav a { font-size: 2rem; }
-  .menu-toggle {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-around;
-    width: 30px; 
-    height: 25px; 
-    background: transparent; 
-    border: none; 
-    cursor: pointer;
-    padding: 0; 
-    z-index: 1001;
-  }
-  .menu-toggle span { width: 30px; height: 2px; background: var(--color-text); border-radius: 10px; transition: var(--transition); transform-origin: center; }
-  .nav-open .menu-toggle span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
-  .nav-open .menu-toggle span:nth-child(2) { opacity: 0; }
-  .nav-open .menu-toggle span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
 
-  .content-section { grid-template-columns: 1fr; text-align: center; }
-  .about-text h2 { text-align: center; }
-  .footer-content { flex-direction: column; text-align: center; }
-  .contact-info { flex-direction: column; gap: var(--spacing-md); }
-  .credibility-grid { grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md); }
+/* Para Celulares (até 768px) */
+@media (max-width: 768px) {
+    h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
+    h2 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+    
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* --- Header e Menu Mobile --- */
+    .header .container { 
+        position: relative; 
+    }
+    .main-nav {
+        display: flex; 
+        position: fixed; 
+        top: 0; 
+        right: -100%;
+        width: 100%; 
+        height: 100vh; 
+        background-color: var(--color-bg);
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+        transition: right 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 999;
+    }
+    .main-nav.nav-open { 
+        right: 0; 
+    }
+    .main-nav ul { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: var(--spacing-xl); 
+    }
+    .main-nav a { 
+        font-size: 2rem; 
+        padding: var(--spacing-sm);
+    }
+    .menu-toggle {
+        display: flex; 
+        flex-direction: column; 
+        justify-content: space-around;
+        width: 30px; 
+        height: 25px; 
+        background: transparent; 
+        border: none; 
+        cursor: pointer;
+        padding: 0; 
+        z-index: 1001;
+    }
+    .menu-toggle span { 
+        width: 30px; 
+        height: 2px; 
+        background: var(--color-text); 
+        border-radius: 10px; 
+        transition: var(--transition); 
+        transform-origin: center; 
+    }
+    .nav-open .menu-toggle span:nth-child(1) { 
+        transform: translateY(8.5px) rotate(45deg); 
+    }
+    .nav-open .menu-toggle span:nth-child(2) { 
+        opacity: 0; 
+    }
+    .nav-open .menu-toggle span:nth-child(3) { 
+        transform: translateY(-8.5px) rotate(-45deg); 
+    }
+
+    /* --- Ajustes de Seções Específicas --- */
+    #hero {
+        min-height: auto;
+        padding: calc(var(--spacing-xl) + 80px) 0;
+    }
+    .hero-image-content img {
+        max-height: 350px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    /* Garante que os botões fiquem centralizados */
+    .cta-button, .secondary-button {
+        justify-content: center;
+        width: 100%;
+        max-width: 350px; /* Limita a largura máxima dos botões */
+    }
+    .credibility-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: var(--spacing-md); 
+    }
+    .footer-content { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .contact-info { 
+        flex-direction: column; 
+        gap: var(--spacing-md); 
+    }
+}
+
+/* Para Celulares Muito Pequenos (até 480px) */
+@media (max-width: 480px) {
+    .credibility-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .cta-button, #hero .cta-button, #hero .secondary-button {
+        width: 100%;
+        padding: var(--spacing-md) var(--spacing-sm);
+        font-size: 1rem;
+    }
 }
 
 /* --- 9. ACESSIBILIDADE E ANIMAÇÕES --- */
